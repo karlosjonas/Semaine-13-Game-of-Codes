@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tenu de compte</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	</head>
+
+	<body>
+		<h1><span>A</span>ngular.js "<span>T</span>enu de <span>C</span>ompte"</h1>
+
+		<div ng-app="app" id="container">
+		    <div ng-controller="appCtrl">
+		        <input ng-model="valeur" placeholder="VALEUR" /></br>
+		        <button ng-click="addDepense()" id="bot">Ajouter dépense</button>
+		        <ul>
+		            <li ng-repeat="depense in depenses">
+		                {{ depense.valeur }} <span ng-click="rmDepense($index)" id="color">×</span>
+		            </li>
+		        </ul>
+		        <strong>Total Des Dépenses <p id="tot">{{ total }}<p></strong>
+		    </div>
+		</div>
+		
+		<script src="js/api.js"></script>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
